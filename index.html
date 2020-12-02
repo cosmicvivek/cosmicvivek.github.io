@@ -6,10 +6,33 @@
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <title>Le Crest</title>
 </head>
-
-<script src="https://app.wotnot.io/chat-widget/VYzLGsF8SxNx041300713979HzMn06Fz.js" defer></script>
-
 <body>
+
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      xfbml            : true,
+      version          : 'v9.0'
+    });
+  };
+
+  (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your Chat Plugin code -->
+<div class="fb-customerchat"
+  attribution=setup_tool
+  page_id="102956178216344">
+</div>
+
+  <script src="https://app.wotnot.io/chat-widget/VYzLGsF8SxNx041300713979HzMn06Fz.js" defer></script>
     <header class="text-gray-700 body-font">
         <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
           <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
@@ -22,7 +45,7 @@
             <a href="contact.html"class="mr-5 hover:text-gray-900">Contact Us</a>
             <a href="about.html"class="mr-5 hover:text-gray-900">About Us</a>
             <a href="covid.html"class="mr-5 hover:text-gray-900">COVID-19</a>
-            <a href="email.html"class="mr-5 hover:text-gray-900">WhatsApp Us</a>
+            <a href="whatsapp.html"class="mr-5 hover:text-gray-900">WhatsApp Us</a>
           </nav>
           <button class="inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0">Button
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
